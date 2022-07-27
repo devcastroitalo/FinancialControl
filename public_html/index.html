@@ -6,9 +6,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Financial Control</title>
+        
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css"/>
     </head>
     
     <body>
-        <div>TODO write content</div>
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">Financial Control</h1>
+            </div>
+        </header> 
+        
+        <main class="main">
+            <div class="current-balance-container">
+                <h1 class="current-balance">$0</h1>
+            </div>
+            
+            <div class="new-finance-container">
+                <form class="new-finance-form">
+                    <input class="new-finance__value-input" type="number" placeholder="Value" required>
+                    <input class="new-finance__title-input" type="text" placeholder="Title" required>
+                    
+                    <button class="new-finance__button">&#43 Add</button>
+                </form>
+            </div>
+            
+            <div class="finances-container">
+                <div class="income-container">
+                    <h2 class="income__title">Incomes</h2>
+                    
+                    <div class="income-list-container">
+                        <div class="income-list__item">
+                            <h3 class="income-list__item__title">One</h3>
+                            <p class="income-list__item__value">$500</p>
+                        </div>
+                       <div class="income-list__item">
+                            <h3 class="income-list__item__title">One</h3>
+                            <p class="income-list__item__value">$500</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expense-container">
+                    <h2 class="expense__title">Expenses</h2>
+                    
+                    <div class="expense-list-container">
+                        <div class="expense-list__item">
+                            <h3 class="expense-list__item__title">Two</h3>
+                            <p class="expense-list__item__value">-$50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialog-container inactive">
+                <div class="dialog-form-container">
+                    <h2 class="dialog-form__title">Edit</h2>
+                    
+                    <form class="dialog-form__form">
+                        <input class="dialog-form__form__value" type="number">
+                        <input class="dialog-form__form__title" type="text">
+                        
+                        <div class="dialog-form__options">
+                            <button class="dialog-form__options__done-btn">Done</button>
+                            <button class="dialog-form__options__delete-btn">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+        <!-- models -->
+        
+        <!-- views -->
+        
+        <!-- controller -->
+        
+        <!-- helpers -->
+        
+        <!-- services -->
+        
+        <script>
+            console.log("Hello World");
+        </script>
     </body>
 </html>

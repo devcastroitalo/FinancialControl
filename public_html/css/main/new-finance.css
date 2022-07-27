@@ -1,0 +1,35 @@
+.new-finance-container {
+    max-width: 1024px;
+    margin: 1em auto;
+}
+
+.new-finance-form {
+    display: flex;
+    align-items: center;
+}
+
+.new-finance__title-input,
+.new-finance__value-input,
+.new-finance__button {
+    padding: .5em;
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+}
+
+.new-finance__value-input {
+    width: 100px;
+}
+
+.new-finance__title-input {
+    margin: 0 .5em;
+    flex-grow: 1;
+}
+
+.new-finance__button {
+    width: 100px;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+
+

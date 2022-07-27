@@ -1,0 +1,15 @@
+.header {
+    background-color: var(--dark-beige);
+}
+
+.header .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.header__title {
+    font-size: 2em;
+    text-align: center;
+    color: var(--white);
+}

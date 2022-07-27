@@ -1,0 +1,25 @@
+@import url("header/header.css");
+@import url("main/main.css");
+
+:root {
+    --beige: #f5eded;
+    --dark-beige: #e3c4a8;
+    --red: #d72323;
+    --green: #2cb978;
+    --gray: #dee1ec;
+    --dark-gray: #3e3636;
+    --black: #000000;
+    --white: #FFFFFF;
+    --blue: #226089;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    background-color: var(--beige);
+}

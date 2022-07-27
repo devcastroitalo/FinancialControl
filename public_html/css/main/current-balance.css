@@ -1,0 +1,20 @@
+.current-balance-container {
+    width: 100%;
+    background-color: var(--black);
+    padding: 1em;
+}
+
+.current-balance {
+    font-size: 5em;
+    color: var(--white);
+    text-align: center;
+}
+
+.positive {
+    color: var(--green);
+}
+
+.negative {
+    color: var(--red);
+}
+

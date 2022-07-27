@@ -1,0 +1,65 @@
+.dialog-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-form-container {
+    padding: 1em;
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+.dialog-form__title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: .5em;
+}
+
+.dialog-form__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-form__form__value,
+.dialog-form__form__title {
+    width: 300px;
+    margin-bottom: .5em;
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+    padding: .3em;
+}
+
+.dialog-form__options {
+    display: flex;
+    align-items: center;
+}
+
+.dialog-form__options__done-btn,
+.dialog-form__options__delete-btn {
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+    padding: .3em;
+    flex-grow: 1;
+    color: var(--white);
+}
+
+.dialog-form__options__done-btn {
+    margin-right: .25em;
+    background-color: var(--blue);
+}
+
+.dialog-form__options__delete-btn {
+    margin-left: .25em;
+    background-color: var(--red);
+}
+
+.inactive {
+    display: none;
+}
+

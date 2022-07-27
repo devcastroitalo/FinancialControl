@@ -1,0 +1,38 @@
+@import url("finance-list.css");
+
+.finances-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+}
+
+.income-container,
+.expense-container {
+    padding: 1em;
+    flex-grow: 1;
+}
+
+.income__title,
+.expense__title {
+    text-align: center; 
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.income-container {
+    margin-right: .25em;
+}
+
+.income__title {
+    color: var(--green);
+}
+
+.expense-container {
+    margin-left: .25em;
+}
+
+.expense__title {
+    color: var(--red);
+}

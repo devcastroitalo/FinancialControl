@@ -1,0 +1,37 @@
+.income-list__item,
+.expense-list__item {
+    width: inherit;
+    display: flex;
+    padding: 1em;
+    background-color: var(--white);
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.income-list__item {
+    border-left: 5px solid var(--green);
+}
+
+.expense-list__item {
+    border-left: 5px solid var(--red);
+}
+
+.income-list__item__title,
+.expense-list__item__title {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+.income-list__item__value,
+.expense-list__item__value {
+    font-weight: 500;
+}
+
+.income-list__item__value {
+    color: var(--green);
+}
+
+.expense-list__item__value {
+    color: var(--red);
+}
+
