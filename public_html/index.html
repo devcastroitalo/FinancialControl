@@ -27,11 +27,11 @@
             </div>
             
             <div class="new-finance-container">
-                <form class="new-finance-form">
+                <form class="new-finance-form" onsubmit="financeController.add(event)">
                     <input class="new-finance__value-input" type="number" placeholder="Value" required>
                     <input class="new-finance__title-input" type="text" placeholder="Title" required>
                     
-                    <button class="new-finance__button">&#43 Add</button>
+                    <button class="new-finance__button" type="submit">&#43 Add</button>
                 </form>
             </div>
             
@@ -39,27 +39,13 @@
                 <div class="income-container">
                     <h2 class="income__title">Incomes</h2>
                     
-                    <div class="income-list-container">
-                        <div class="income-list__item">
-                            <h3 class="income-list__item__title">One</h3>
-                            <p class="income-list__item__value">$500</p>
-                        </div>
-                       <div class="income-list__item">
-                            <h3 class="income-list__item__title">One</h3>
-                            <p class="income-list__item__value">$500</p>
-                        </div>
-                    </div>
+                    <div class="income-list-container"></div>
                 </div>
                 
                 <div class="expense-container">
                     <h2 class="expense__title">Expenses</h2>
                     
-                    <div class="expense-list-container">
-                        <div class="expense-list__item">
-                            <h3 class="expense-list__item__title">Two</h3>
-                            <p class="expense-list__item__value">-$50</p>
-                        </div>
-                    </div>
+                    <div class="expense-list-container"></div>
                 </div>
             </div>
             
@@ -81,17 +67,26 @@
         </main>
         
         <!-- models -->
+        <script src="js/models/Finance.js"></script>
+        <script src="js/models/List.js"></script>
+        <script src="js/models/IncomeList.js"></script>
+        <script src="js/models/ExpenseList.js"></script>
         
         <!-- views -->
+        <script src="js/views/View.js"></script>
+        <script src="js/views/IncomeView.js"></script>
+        <script src="js/views/ExpenseView.js"></script>
         
         <!-- controller -->
+        <script src="js/controllers/FinanceController.js"></script>
         
         <!-- helpers -->
         
         <!-- services -->
+        <script src="js/services/ProxyFactory.js"></script>
         
         <script>
-            console.log("Hello World");
+            let financeController = new FinanceController();
         </script>
     </body>
 </html>
