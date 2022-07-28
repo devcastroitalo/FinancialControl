@@ -23,22 +23,49 @@ class FinanceController {
                     self._expenseView.update(model.data);
                 }
                 ); 
+        
+        ConnectionFactory.getConnection()
+                .then((connection) => {
+                    new FinanceDao(connection).list()
+                        .then((finances) => {
+                            finances.forEach((finance) => {
+                                if (finance.value < 0) {
+                                    this._expenseList.add(finance);
+                                } else {
+                                    this._incomeList.add(finance);
+                                }
+                            });
+                    });
+        });
     }
     
     _createFinance() {
         return new Finance(
-                parseFloat(this._financeValue.value),
+                parseInt(this._financeValue.value),
                 this._financeTitle.value
         );
+    }
+    
+    _addIndexedDB(finance, list) {
+        ConnectionFactory.getConnection()   
+                .then((connection) => {
+                    new FinanceDao(connection).add(finance)
+                        .then(() => {
+                            list.add(finance);
+                    });
+        })
+                .catch((error) => {
+                    console.log(error);
+        });
     }
     
     _addFinance() {
         let finance = this._createFinance();
         
         if (finance.value < 0) {
-            this._expenseList.add(finance);
+            this._addIndexedDB(finance, this._expenseList);
         } else {
-            this._incomeList.add(finance);
+            this._addIndexedDB(finance, this._incomeList);
         } 
     }
     

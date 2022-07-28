@@ -1,4 +1,8 @@
 class ProxyFactory {
+    constructor() {
+        throw new Error("ProxyFactory is an abstract class");
+    }
+    
     static create(object, props, action) {
         return new Proxy(object, {
             get(target, prop, receiver) {
